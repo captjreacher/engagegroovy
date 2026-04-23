@@ -1,0 +1,12 @@
+[
+  {
+    "template_id": "headline_focus",
+    "layout_type": "headline + body + cta",
+    "structure": ["headline", "body", "cta"]
+  },
+  {
+    "template_id": "stat_focus",
+    "layout_type": "stat + explanation + cta",
+    "structure": ["headline", "body", "cta"]
+  }
+]

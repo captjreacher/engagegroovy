@@ -1,0 +1,22 @@
+{
+  "job_id": "test-linkedin-001",
+  "brand_id": "mgrnz",
+  "output_type": "linkedin_post",
+  "objective": "highlight insight",
+  "audience": "founders and operators",
+  "tone": ["direct", "commercial", "analytical"],
+  "channel": "linkedin",
+  "copy_source": {
+    "headline": "AI adoption has a trust problem",
+    "subheadline": "",
+    "body": "Most organisations do not lack tools. They lack process control, trust, and usable governance.",
+    "cta": "Start at the process layer"
+  },
+  "constraints": {
+    "max_text_blocks": 3,
+    "max_words": 40,
+    "must_include": [],
+    "must_avoid": ["clutter", "generic stock design"],
+    "aspect_ratio": "1:1"
+  }
+}

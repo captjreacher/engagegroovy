@@ -1,0 +1,66 @@
+{
+  "selected_template_id": "headline_focus",
+  "layout_plan": {
+    "aspect_ratio": "1:1",
+    "alignment": "left",
+    "structure": [
+      "headline",
+      "body",
+      "cta"
+    ],
+    "hierarchy": "Large headline top-left, concise body beneath, CTA lower-left.",
+    "spacing": "lg outer margins, md gap between headline and body, xl gap before CTA"
+  },
+  "style_plan": {
+    "background": "bg-dark",
+    "palette": [
+      "bg-dark",
+      "text-light",
+      "accent-blue"
+    ],
+    "typography": {
+      "headline": "heading-xl",
+      "body": "body-md",
+      "cta": "label-sm"
+    },
+    "tone": [
+      "direct",
+      "analytical",
+      "commercially useful",
+      "minimal",
+      "editorial"
+    ],
+    "avoid": [
+      "cartoonish",
+      "meme-like",
+      "over-decorated",
+      "clutter",
+      "generic stock design"
+    ]
+  },
+  "component_plan": [
+    {
+      "role": "headline",
+      "content": "Trust, Not Tools, Drives AI Success"
+    },
+    {
+      "role": "body",
+      "content": "Trust emerges from clear boundaries, workflows, controls, and accountability in AI processes."
+    },
+    {
+      "role": "cta",
+      "content": "Discover how to build AI trust in your organization."
+    }
+  ],
+  "qa_notes": {
+    "status": "pass",
+    "manual_review_needed": false,
+    "checks": [
+      "Angle: insight framing.",
+      "AI-generated draft validated against renderer-compatible schema.",
+      "Three content elements used.",
+      "Concise LinkedIn post copy.",
+      "Minimal editorial brand tone maintained."
+    ]
+  }
+}

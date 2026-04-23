@@ -1,0 +1,15 @@
+{
+  "brand_id": "mgrnz",
+  "visual_style": ["minimal", "editorial", "high-contrast"],
+  "disallowed_styles": ["cartoonish", "meme-like", "over-decorated"],
+  "palette": ["bg-dark", "text-light", "accent-blue"],
+  "font_tokens": ["heading-xl", "heading-lg", "body-md", "label-sm"],
+  "spacing_scale": ["xs", "sm", "md", "lg", "xl"],
+  "default_alignment": "left",
+  "design_principles": [
+    "clarity over flair",
+    "strong hierarchy",
+    "limited focal points",
+    "commercial polish"
+  ]
+}

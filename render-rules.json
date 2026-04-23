@@ -1,0 +1,25 @@
+{
+  "canvas": {
+    "width": 1080,
+    "height": 1080,
+    "background": "bg-dark"
+  },
+  "tokens": {
+    "bg-dark": "#0b163d",
+    "text-light": "#f8fafc",
+    "accent-blue": "#38bdf8",
+    "heading-xl": "52px",
+    "body-md": "24px",
+    "label-sm": "18px",
+    "xs": "8px",
+    "sm": "16px",
+    "md": "24px",
+    "lg": "40px",
+    "xl": "72px"
+  },
+  "layout_defaults": {
+    "padding": "lg",
+    "headline_max_width": "780px",
+    "body_max_width": "720px"
+  }
+}
