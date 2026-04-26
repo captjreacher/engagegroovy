@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Issue",
+  "type": "object",
+  "required": ["id","title","domain","event_type","schema","routing_path","status","created_at","updated_at"],
+  "properties": {
+    "id": {"type": "string", "format": "uuid"},
+    "title": {"type": "string"},
+    "description": {"type": "string"},
+    "domain": {"type": "string"},
+    "event_type": {"type": "string"},
+    "schema": {"type": "string"},
+    "routing_path": {"type": "string"},
+    "priority": {"type": "string", "enum": ["low", "medium", "high"]},
+    "status": {"type": "string", "enum": ["pending", "in_progress", "completed", "cancelled"]},
+    "assignee": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "attachments": {"type": "array", "items": {"type": "string"}},
+    "comments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "author", "text", "created_at"],
+        "properties": {
+          "id": {"type": "string"},
+          "author": {"type": "string"},
+          "text": {"type": "string"},
+          "created_at": {"type": "string", "format": "date-time"}
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}
