@@ -10,10 +10,14 @@ const { supabase } = require('./lib/supabase');
 const app = express();
 app.use(express.json());
 
+// Serve static files from scratch directory (for the website)
+app.use(express.static('scratch'));
+
 // Routes
 app.use('/api/content-packages', contentPackageRoutes);
 app.use('/api/email-events', emailEventRoutes);
 app.use('/api/validate', validationRoutes);
+app.use('/api/contact', require('./api/contact'));
 
 const PORT = process.env.PORT || 3000;
 
