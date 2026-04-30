@@ -1,7 +1,41 @@
+# Dependencies
 node_modules/
 .corepack/
-*.png
-*.html
+
+# Environment
 .env
+.env.local
+.env.*.local
+
+# OS Files
 .DS_Store
 Thumbs.db
+
+# Import staging (user downloads cPanel files here)
+scratch/cpanel-live-import/*
+!scratch/cpanel-live-import/README.md
+
+# Archived bad localhost app data
+archived-localhost-app/node_modules/
+archived-localhost-app/.env
+
+# Old scratch files (not production)
+scratch/*.html
+scratch/*.png
+scratch/*.jpg
+scratch/*.diff
+scratch/ftp-live/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs (if any)
+dist/
+build/

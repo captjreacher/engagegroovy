@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Risk Map | EngageGroovy</title>
+  <meta name="description" content="Find where your AI or automation breaks before it costs you.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://engagegroovy.com/risk-map">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EngageGroovy">
+  <meta property="og:title" content="Risk Map | EngageGroovy">
+  <meta property="og:description" content="Find where your AI or automation breaks before it costs you.">
+  <meta property="og:url" content="https://engagegroovy.com/risk-map">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Risk Map | EngageGroovy">
+  <meta name="twitter:description" content="Find where your AI or automation breaks before it costs you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="risk-map">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">EngageGroovy</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="active" href="risk-map.html">Risk Map</a>
+        <a class="btn btn-primary" href="#risk-map-form" data-track="cta" data-cta-label="risk_map_header_start">Start risk map</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-compact">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Risk-weighted event mapping</p>
+          <h1>Find where your AI or automation breaks before it costs you.</h1>
+          <p class="lead">Answer six practical questions and EngageGroovy prepares an AI risk profile, deterministic control, and CEO review issue.</p>
+        </div>
+        <aside class="hero-panel">
+          <p class="panel-title">Event Path</p>
+          <ol class="event-list">
+            <li>lead.captured</li>
+            <li>risk.profile.generated</li>
+            <li>pipeline.recommended</li>
+            <li>paperclip.issue.prepared</li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container risk-grid">
+        <aside class="card risk-summary-card">
+          <p class="eyebrow">Deterministic control</p>
+          <h2>What gets reviewed</h2>
+          <p>The wizard maps AI usage, review gates, process impact, structure, handoffs, and tooling dependency. The output is intentionally narrow: one risk profile, one control, one CEO review issue.</p>
+          <div class="risk-stats">
+            <div>
+              <span id="risk-score-value">--</span>
+              <p>Risk score</p>
+            </div>
+            <div>
+              <span id="risk-score-band">--</span>
+              <p>Risk profile</p>
+            </div>
+          </div>
+          <p class="pipeline-readout"><strong>Pipeline:</strong> <span id="pipeline-value">Waiting for wizard submission</span></p>
+        </aside>
+
+        <div class="card contact-form-card">
+          <form id="risk-map-form" novalidate>
+            <div class="field-row">
+              <label for="risk-name">Full name</label>
+              <input id="risk-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field-row">
+              <label for="risk-email">Work email</label>
+              <input id="risk-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field-row">
+              <label for="risk-company">Company name</label>
+              <input id="risk-company" name="company" autocomplete="organization" required>
+            </div>
+            <div class="field-row">
+              <label for="risk-website">Website</label>
+              <input id="risk-website" name="website" type="url" placeholder="https://example.com">
+            </div>
+            <div class="field-row">
+              <label for="risk-ai-usage">Where is AI being used?</label>
+              <select id="risk-ai-usage" name="ai_usage" required>
+                <option value="">Select current AI usage</option>
+                <option value="none_or_exploring">Not in live work yet</option>
+                <option value="individual_tools">Individual tools or ad hoc prompts</option>
+                <option value="team_workflows">Team workflows or repeated tasks</option>
+                <option value="customer_or_revenue_work">Customer, sales, or revenue work</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <label for="risk-review">What review happens before AI output is used?</label>
+              <select id="risk-review" name="review_before_use" required>
+                <option value="">Select review pattern</option>
+                <option value="always_reviewed">A named owner reviews it every time</option>
+                <option value="spot_checked">It is spot checked</option>
+                <option value="rarely_reviewed">It is rarely reviewed</option>
+                <option value="no_owner">No clear owner or review gate</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <label for="risk-impact">What can the output or process affect?</label>
+              <select id="risk-impact" name="output_process_impact" required>
+                <option value="">Select impact level</option>
+                <option value="internal_reference">Internal reference only</option>
+                <option value="shapes_work">It shapes work before a person finishes it</option>
+                <option value="changes_customer_or_sales_output">It changes customer or sales output</option>
+                <option value="triggers_decisions_or_actions">It can trigger decisions or actions</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <label for="risk-structure">How structured is the process around it?</label>
+              <select id="risk-structure" name="process_structure" required>
+                <option value="">Select process structure</option>
+                <option value="documented_owner_and_steps">Documented owner and steps</option>
+                <option value="known_but_informal">Known but informal</option>
+                <option value="varies_by_person">Varies by person</option>
+                <option value="unclear_or_missing">Unclear or missing</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <label for="risk-handoffs">Where do manual handoffs still happen?</label>
+              <select id="risk-handoffs" name="manual_handoffs" required>
+                <option value="">Select handoff pattern</option>
+                <option value="few_and_clear">Few and clear</option>
+                <option value="several_manual_steps">Several manual steps</option>
+                <option value="frequent_copy_paste">Frequent copy-paste between tools</option>
+                <option value="hidden_rework_or_duplicate_entry">Hidden rework or duplicate entry</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <label for="risk-tooling">How dependent is the workflow on tools?</label>
+              <select id="risk-tooling" name="tooling_dependency" required>
+                <option value="">Select tooling dependency</option>
+                <option value="low_dependency">Low dependency</option>
+                <option value="one_ai_tool">One AI tool</option>
+                <option value="multiple_unconnected_tools">Multiple unconnected tools</option>
+                <option value="ai_embedded_in_core_system">AI embedded in a core system</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <label for="risk-notes">Context for CEO review</label>
+              <textarea id="risk-notes" name="notes" rows="3"></textarea>
+            </div>
+            <p class="consent">By submitting this form, you agree to be contacted by EngageGroovy about your risk map.</p>
+            <button class="btn btn-primary" type="submit" data-track="cta" data-cta-label="risk_map_submit_button">Prepare CEO review issue</button>
+            <p id="risk-map-error" class="form-error" hidden>Something went wrong while preparing your risk map. Please check the required fields and try again.</p>
+          </form>
+
+          <section id="risk-map-success" class="success-state risk-success-state" hidden>
+            <h2>Risk map prepared.</h2>
+            <p>The event chain has been emitted in the browser session and the Paperclip issue payload is ready for CEO review.</p>
+            <pre id="paperclip-issue-output" class="issue-output" aria-label="Prepared Paperclip issue JSON"></pre>
+            <a class="btn btn-ghost" href="contact.html?cta=risk-map-success#inquiry" data-track="cta" data-cta-label="risk_map_success_contact">Discuss the recommendation</a>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>EngageGroovy</p>
+      <p>hello@engagegroovy.com</p>
+    </div>
+  </footer>
+  <script src="assets/site-config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

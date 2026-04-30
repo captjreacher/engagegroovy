@@ -18,12 +18,18 @@ app.use('/api/content-packages', contentPackageRoutes);
 app.use('/api/email-events', emailEventRoutes);
 app.use('/api/validate', validationRoutes);
 app.use('/api/contact', require('./api/contact'));
+app.use('/api/risk-map', require('./api/risk-map'));
 
 const PORT = process.env.PORT || 3000;
 
 // Simple Event Loop Simulation
 // In production, this would be a separate worker process or a Supabase Webhook.
 async function startEventProcessor() {
+  if (!supabase) {
+    console.log('Event processor skipped because Supabase credentials are not configured.');
+    return;
+  }
+
   console.log('Event processor started. Listening for new events...');
   
   // Example of a simple polling mechanism if webhooks aren't used

@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   window.ENGAGE_GROOVY_CONFIG = window.ENGAGE_GROOVY_CONFIG || {};
 
   // Set gaMeasurementId (for example "G-XXXXXXXXXX") before production launch.
@@ -18,13 +18,5 @@
     },
     window.ENGAGE_GROOVY_CONFIG.contact || {}
   );
-
-  // Set endpoint to "/api/risk-map/submit" when the archived Express bridge is running.
-  window.ENGAGE_GROOVY_CONFIG.risk = Object.assign(
-    {
-      endpoint: "",
-      timeoutMs: 12000
-    },
-    window.ENGAGE_GROOVY_CONFIG.risk || {}
-  );
 })();
+

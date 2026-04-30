@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - EngageGroovy</title>
+  <meta name="description" content="Get in touch with EngageGroovy for content, design, and automation services.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">EngageGroovy</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <div class="container">
+        <h1>Get in Touch</h1>
+        <p class="intro">Tell us about your project and we'll get back to you within 24 hours.</p>
+
+        <form action="https://formsubmit.co/b3b8fa08e07860d7b35ea92e3681b10b" method="POST" class="contact-form">
+
+          <!-- FormSubmit Configuration -->
+          <input type="hidden" name="_subject" value="New contact inquiry from EngageGroovy">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://engagegroovy.com/thank-you.html">
+
+          <!-- Name -->
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <!-- Company -->
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company">
+          </div>
+
+          <!-- Request Type -->
+          <div class="form-group">
+            <label for="request_type">Request Type *</label>
+            <select id="request_type" name="request_type" required>
+              <option value="">Select type...</option>
+              <option value="general">General enquiry</option>
+              <option value="content">Content request</option>
+              <option value="design">Design request</option>
+              <option value="website">Website/project request</option>
+              <option value="automation">Automation request</option>
+              <option value="support">Support / issue</option>
+              <option value="partnership">Partnership</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Tell us about your project, timeline, and budget..."></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <h2>Other Ways to Reach Us</h2>
+          <p><strong>Email:</strong> <a href="mailto:hello@engagegroovy.com">hello@engagegroovy.com</a></p>
+          <p><strong>Response Time:</strong> Within 24 hours</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 EngageGroovy. Privacy-minded. No spam.</p>
+  </footer>
+</body>
+</html>

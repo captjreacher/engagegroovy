@@ -5,6 +5,7 @@ All routing paths are predefined and deterministic.
 ## Domains
 
 - `mgrnz`
+- `engagegroovy`
 - `maxai`
 - `funkmybrand`
 - `dotcomseekr`
@@ -34,3 +35,11 @@ MGRNZ CEO escalation path:
 `mgrnz.support.ticket_created -> support_agent -> CEO`
 
 CEO escalation is allowed only when the escalation trigger is met. Otherwise the ticket remains inside the predefined support routing path.
+
+## EngageGroovy Risk Map V1
+
+Risk map path:
+
+`lead.captured -> risk.profile.generated -> pipeline.recommended -> paperclip.issue.prepared -> CEO`
+
+The V1 route is deterministic. The wizard computes a risk band from the selected growth risk, revenue goal, timeline, and pipeline signal. The resulting `issue.v1` payload is prepared for CEO review and can be posted through the archived Express bridge at `/api/risk-map/submit` when Supabase credentials are configured.

@@ -8,6 +8,6 @@ if (!supabaseUrl || !supabaseKey) {
   console.warn('Supabase credentials missing. Ensure SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are set.');
 }
 
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
 module.exports = { supabase };

@@ -1,0 +1,54 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify site directory exists
+        run: |
+          if [ ! -d "site" ]; then
+            echo "❌ ERROR: site/ directory not found!"
+            echo "You need to import the cPanel live site first."
+            echo "Run: npm run import:cpanel-live"
+            exit 1
+          fi
+          if [ ! -f "site/index.html" ]; then
+            echo "❌ ERROR: site/index.html not found!"
+            echo "The site/ directory appears to be empty."
+            exit 1
+          fi
+          echo "✅ site/ directory verified"
+          ls -la site/
+
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.CPANEL_FTP_SERVER }}
+          username: ${{ secrets.CPANEL_FTP_USERNAME }}
+          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
+          local-dir: ./site/
+          server-dir: ./public_html/
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.DS_Store
+            **/Thumbs.db
+            **/.env
+            **/scratch/**
+
+      - name: Deployment Complete
+        run: |
+          echo "✅ Deployment to cPanel complete!"
+          echo "🌐 Live site: https://engagegroovy.com"
